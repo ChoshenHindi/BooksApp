@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.booksapp.ui.posts.BookPostsFragment"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.example.booksapp.ui.profile.ProfileFragment"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_open_profile_activiy"
+            app:destination="@id/update_profile_activity" />
+
+        <action
+            android:id="@+id/action_posts_activiy"
+            app:destination="@id/posts_activity" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/comments"
+        android:name="com.example.booksapp.ui.posts.BookPostsFragment"
+        tools:layout="@layout/fragment_home" />
+    <activity
+        android:id="@+id/update_profile_activity"
+        android:name="com.example.booksapp.ui.create_profile.UpdateProfileActivity">
+
+        <argument
+            android:name="user"
+            app:argType="com.example.booksapp.entities.User"
+            app:nullable="true" />
+    </activity>
+
+    <activity
+        android:id="@+id/posts_activity"
+        android:name="com.example.booksapp.ui.posts.PostsActivity">
+
+        <argument
+            android:name="type"
+            app:argType="com.example.booksapp.ui.posts.PostsScreenType"
+            />
+    </activity>
+</navigation>
