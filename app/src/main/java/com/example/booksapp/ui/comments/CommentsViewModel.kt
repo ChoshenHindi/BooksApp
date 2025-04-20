@@ -1,4 +1,4 @@
-package com.example.booksapp.ui.create_profile
+package com.example.booksapp.ui.comments
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel

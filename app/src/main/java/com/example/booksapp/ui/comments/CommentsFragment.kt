@@ -1,4 +1,4 @@
-package com.example.booksapp.ui.create_profile
+package com.example.booksapp.ui.comments
 
 import android.app.Activity
 import android.app.ProgressDialog
@@ -15,7 +15,6 @@ import com.example.booksapp.R
 import com.example.booksapp.databinding.CommentScreenBinding
 import com.example.booksapp.entities.Post
 import com.example.booksapp.entities.User
-import com.example.booksapp.ui.posts.CommentsAdapter
 import java.util.UUID
 
 class CommentsFragment : Fragment() {
