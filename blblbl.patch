@@ -1,0 +1,45 @@
+Subject: [PATCH] blblbl
+---
+Index: app/src/main/java/com/example/booksapp/utils/AlertDialogsUtils.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/booksapp/utils/AlertDialogsUtils.kt b/app/src/main/java/com/example/booksapp/utils/AlertDialogsUtils.kt
+new file mode 100644
+--- /dev/null	(date 1743100826240)
++++ b/app/src/main/java/com/example/booksapp/utils/AlertDialogsUtils.kt	(date 1743100826240)
+@@ -0,0 +1,32 @@
++package com.example.booksapp.utils
++
++import android.content.Context
++import android.content.DialogInterface
++import androidx.appcompat.app.AlertDialog
++import com.example.booksapp.R
++
++class AlertDialogUtils {
++
++    companion object {
++        fun showAlert(context: Context, title: String, message: String) {
++            AlertDialog.Builder(context)
++                .setMessage(message)
++                .setTitle(title)
++                .show()
++        }
++
++        fun showAlertWithButtons(context: Context, title: String, message: String,
++            positiveListener: DialogInterface.OnClickListener, negativeListener: DialogInterface.OnClickListener) {
++            AlertDialog.Builder(context)
++                .setMessage(message)
++                .setTitle(title)
++                .setPositiveButton(R.string.yes) {dialog, x->
++                    positiveListener.onClick(dialog, x)
++                }
++                .setNegativeButton(R.string.cancel){dialog, x->
++                    negativeListener.onClick(dialog, x)
++                }
++                .show()
++        }
++    }
++}
+\ No newline at end of file
