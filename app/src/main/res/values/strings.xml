@@ -48,4 +48,5 @@
     <string name="search_by_book_name">Search book name...</string>
     <string name="write_comment">Write comment...</string>
     <string name="comments">Comments</string>
+    <string name="search">Search</string>
 </resources>

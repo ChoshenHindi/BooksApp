@@ -24,6 +24,19 @@
     </fragment>
 
     <fragment
+        android:id="@+id/search"
+        android:name="com.example.booksapp.ui.search_books.SearchBooksFragment"
+        tools:layout="@layout/search_books_fragment" >
+        <action
+            android:id="@+id/action_open_search"
+            app:destination="@id/update_profile_activity" />
+
+        <action
+            android:id="@+id/action_posts_activiy"
+            app:destination="@id/posts_activity" />
+    </fragment>
+
+    <fragment
         android:id="@+id/comments"
         android:name="com.example.booksapp.ui.posts.BookPostsFragment"
         tools:layout="@layout/fragment_home" />
