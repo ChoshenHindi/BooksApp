@@ -17,7 +17,6 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class SearchBooksViewModel : ViewModel() {
 
-    val createSuccess : MutableLiveData<Unit> = MutableLiveData()
     val onError : MutableLiveData<String> = MutableLiveData()
     val books: MutableLiveData<ArrayList<Book>> = MutableLiveData()
 
